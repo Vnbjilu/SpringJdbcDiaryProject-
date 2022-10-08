@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	   
+	  
+	   
+	  <bean id="diary" class="vikas.RatanRaman.Diary" scope="prototype"></bean>
+	  <bean id="dao" class="vikas.RatanRaman.DiaryDao">
+	  
+	  <property name="temp" ref="tmp"></property>
+	  </bean>
+	  <bean id="tmp" class="org.springframework.jdbc.core.JdbcTemplate">
+	  <property name="dataSource" ref="ds"></property>
+	  
+	  </bean>
+	  
+	  <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	  <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
+	  <property name="url" value="jdbc:mysql://localhost:3306/phase3_vikas"></property>
+	  <property name="username" value="root"></property>
+	  <property name="password" value="Vnbjilu8009@"></property>
+	  </bean>
+	   
+	   </beans>
