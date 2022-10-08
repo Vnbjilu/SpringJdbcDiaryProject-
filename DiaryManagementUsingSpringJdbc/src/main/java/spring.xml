@@ -5,8 +5,13 @@
 	  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	   
 	  
+	  <bean id="userlogin" class="vikas.RatanRaman.UserLogin"></bean>
 	   
 	  <bean id="diary" class="vikas.RatanRaman.Diary" scope="prototype"></bean>
+	  <bean id="user" class="vikas.RatanRaman.User" scope="prototype"> </bean>
+	  <bean id="userDao" class="vikas.RatanRaman.UserDao">
+	  <property name="temp" ref="tmp"></property>
+	  </bean>
 	  <bean id="dao" class="vikas.RatanRaman.DiaryDao">
 	  
 	  <property name="temp" ref="tmp"></property>
