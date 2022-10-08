@@ -14,7 +14,7 @@ public class App
      ApplicationContext context=new ClassPathXmlApplicationContext("spring.xml");
      DiaryDao dd=context.getBean(DiaryDao.class);
      //dd.insert();
-     dd.display();
+     //dd.delete();
      
      
     }

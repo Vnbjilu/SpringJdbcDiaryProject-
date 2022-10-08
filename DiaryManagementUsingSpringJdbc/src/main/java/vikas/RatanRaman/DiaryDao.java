@@ -106,6 +106,16 @@ public class DiaryDao {
 	}
 	public void delete()
 	{
+		int id=0;
+		sc=new Scanner(System.in);
+		System.out.print("\n\n\t Enter the Person Id that record you want to delete ");
+		id=sc.nextInt();
+		String query="delete from person where personId="+id;
+		if(temp.update(query)>0)
+			System.out.println("\n\n Record is deleted Successfully ");
+		else
+			System.out.println("\n\t Sorry !! Record is not Found of Id="+id);
+		
 		
 	}
 
